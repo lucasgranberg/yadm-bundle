@@ -8,7 +8,6 @@ use Formapro\Yadm\ChangesCollector;
 use Formapro\Yadm\ClientProvider;
 use Formapro\Yadm\CollectionFactory;
 use Formapro\Yadm\ConvertValues;
-use Formapro\Yadm\Migration\Symfony\MigrationsDIFactory;
 use Formapro\Yadm\PessimisticLock;
 use Formapro\Yadm\Registry;
 use Formapro\Yadm\Type\UTCDatetimeType;
@@ -159,8 +158,5 @@ class YadmExtension extends Extension
             ->setArgument(1, new Reference('yadm.client_provider'))
             ->addTag('console.command')
         ;
-
-        // migrations
-        MigrationsDIFactory::buildServices($config['migrations'], $container);
     }
 }

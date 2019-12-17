@@ -4,8 +4,7 @@
   "license": "MIT",
   "require": {
     "php": ">=7.1",
-    "formapro/yadm": "^0.5.5",
-    "formapro/yadm-migrations": "^0.5"
+    "formapro/yadm": "^0.5.5"
   },
   "suggest": {
     "doctrine/data-fixtures": "^1.2  If you want to use fixture load command"
@@ -20,5 +19,7 @@
     "branch-alias": {
       "dev-master": "0.5.x-dev"
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
