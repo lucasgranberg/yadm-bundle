@@ -14,8 +14,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $tb = new TreeBuilder();
-        $rootNode = $tb->root('yadm');
+        $tb = new TreeBuilder('yadm');
+        $rootNode = $tb->getRootNode();
 
         $rootNode->children()
             ->scalarNode('mongo_uri')->cannotBeEmpty()->isRequired()->end()
